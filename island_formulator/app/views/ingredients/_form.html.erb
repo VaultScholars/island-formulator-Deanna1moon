@@ -31,6 +31,20 @@
     <%= form.textarea :notes, rows: 4, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": ingredient.errors[:notes].none?, "border-red-400 focus:outline-red-600": ingredient.errors[:notes].any?}] %>
   </div>
 
+<div class="my-5">
+  <%= form.label :tag_ids, "Tags", class: "block text-sm font-medium text-gray-600 mb-2" %>
+
+  <div class="grid grid-cols-2 gap-2">
+    <%= form.collection_check_boxes :tag_ids, Tag.all, :id, :name do |cb| %>
+      <label class="flex items-center space-x-2 text-sm text-gray-700">
+        <%= cb.check_box class: "w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" %>
+        <span><%= cb.text %></span>
+      </label>
+    <% end %>
+  </div>
+</div>
+
+</p>
   <div class="inline"  >
     <%= form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
   </div>
