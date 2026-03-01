@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  before_action :require_authentication
   before_action :set_ingredient, only: %i[ show edit update destroy ]
 
   # GET /ingredients or /ingredients.json
@@ -14,6 +15,11 @@ end
 def new
  @ingredient = Current.user.ingredients.new
 end
+
+  def new
+    @ingredient = current_user.ingredients.build  # Was: Ingredient.new
+  end
+
 
   # GET /ingredients/1/edit
   def edit

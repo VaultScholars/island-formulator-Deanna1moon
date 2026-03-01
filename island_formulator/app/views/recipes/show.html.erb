@@ -17,6 +17,14 @@
 
   <%= link_to "Back", recipes_path, class: "text-gray-600 hover:underline" %>
 </div>
+<div class="flex gap-2 mt-6">
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  <%= link_to "Back to recipes", recipes_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  
+  <%# Add this button to quickly log a batch from the recipe page %>
+  <%= link_to "Log a New Batch", new_batch_path(recipe_id: @recipe.id), 
+      class: "rounded-lg py-3 px-5 bg-green-600 text-white inline-block font-medium" %>
+</div>
   </div>
   
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -22,6 +22,8 @@ module Authentication
       Current.session&.user
     end
 
+    
+
     def require_authentication
       resume_session || request_authentication
     end
