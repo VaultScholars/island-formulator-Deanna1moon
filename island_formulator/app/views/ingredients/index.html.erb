@@ -7,7 +7,7 @@
 
 <div class="container mx-auto mt-10 px-5">
   <div class="flex justify-between items-center mb-10">
-    <h1 class="text-4xl font-extrabold text-gray-900">My Ingredient Shelf</h1>
+    <h1 class="text-4xl font-extrabold text-gray-900">🌿My Ingredient Shelf🌿</h1>
     <%= link_to "Add New Ingredient", new_ingredient_path, 
         class: "bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200" %>
   </div>
@@ -15,7 +15,7 @@
   <div id="ingredients" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <% if @ingredients.any? %>
       <% @ingredients.each do |ingredient| %>
-<div class="bg-rose-50 border border-rose-100 shadow-lg rounded-xl p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
+<div class="bg-green-50 border border-rose-100 shadow-lg rounded-xl p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between">
           <div class="p-4">
   <%= render ingredient %>
            </div>
@@ -32,4 +32,5 @@
       <p class="text-center my-10">No ingredients found.</p>
     <% end %>
   </div>
+
 </div>

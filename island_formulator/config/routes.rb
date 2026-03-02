@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-   root "ingredients#index"
+ root "dashboards#show"
   resources :batches
   resources :inventory_items
   resources :recipes
@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
     resources :ingredients
   resources :recipes
+resources :batches, only: [:index, :show, :new, :create, :destroy]
 
 
-  resources :users, only: [:new, :create]
 
 
    
