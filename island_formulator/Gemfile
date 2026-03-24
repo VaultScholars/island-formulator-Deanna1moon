@@ -1,4 +1,6 @@
 source "https://rubygems.org"
+# For DigitalOcean Spaces (S3-compatible storage)
+gem "aws-sdk-s3", require: false
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.2"
@@ -67,4 +69,3 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "bcrypt", "~> 3.1.7"
-

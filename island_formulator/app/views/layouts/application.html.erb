@@ -23,8 +23,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-<main class="container mx-auto mt-28 px-5 flex flex-col">
+<body style="background-image: url('<%= asset_path("background1.jpg") %>');"
+      class="bg-cover bg-center bg-fixed">s
+
+<main class="container mx-auto mt-1 px-5 flex flex-col">
   <nav class="mb-8 px-6 py-4 bg-white border-b border-gray-200 shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <%# Left side - App name and main nav %>
@@ -41,6 +43,7 @@
   <%= link_to "Inventory", inventory_items_path, class: "text-gray-600 hover:text-gray-900 transition-colors" %>
   <%= link_to "Batches", batches_path, class: "text-gray-600 hover:text-gray-900 transition-colors" %>
   <%= link_to "My Ingredients", ingredients_path, class: "text-gray-600 hover:text-gray-900 transition-colors" %>
+  <%= link_to "Favorites", favorites_path, class: "text-green-800 hover:text-green-600" %>
 <% end %>
     </div>
     

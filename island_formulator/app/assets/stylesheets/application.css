@@ -8,3 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body {
+  background: linear-gradient(135deg, #82be58 0%, #f5e9d0 100%);
+  min-height: 100vh;
+}
