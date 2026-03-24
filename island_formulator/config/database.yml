@@ -98,3 +98,7 @@ production:
     <<: *primary_production
     database: island_formulator_production
     migrations_paths: db/cable_migrate
+  queue:
+    <<: *primary_production
+    database: island_formulator_production
+    migrations_paths: db/queue_migrate
