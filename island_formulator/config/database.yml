@@ -86,19 +86,14 @@ test:
 #
 
 production:
-  primary: &primary_production
-    <<: *default
-    database: island_formulator_production
-    username: island_formulator
-    password: <%= ENV["ISLAND_FORMULATOR_DATABASE_PASSWORD"] %>
-    host: <%= ENV["ISLAND_FORMULATOR_DATABASE_HOST"] %>
-    port: <%= ENV["ISLAND_FORMULATOR_DATABASE_PORT"] %>
-    sslmode: require
-  cable:
-    <<: *primary_production
-    database: island_formulator_production
-    migrations_paths: db/cable_migrate
+  primary:
+    url: <%= ENV["DATABASE_URL"] %>
+
+  cache:
+    url: <%= ENV["DATABASE_URL"] %>
+
   queue:
-    <<: *primary_production
-    database: island_formulator_production
-    migrations_paths: db/queue_migrate
+    url: <%= ENV["DATABASE_URL"] %>
+
+  cable:
+    url: <%= ENV["DATABASE_URL"] %>
