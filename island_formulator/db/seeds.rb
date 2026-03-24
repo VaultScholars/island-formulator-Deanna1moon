@@ -31,18 +31,18 @@ puts "Created #{user.ingredients.count} ingredients for demo user!"
 Tag.destroy_all # Clean up old tags if they exist
 
 tags = [
-  "Hair Growth",
-  "Moisturizing",
-  "Anti-inflammatory",
-  "Scalp Soothing",
-  "Shine",
-  "Curl Definition",
-  "Preservative",
-  "Emulsifier",
-  "Antioxidant",
-  "Humectant",
-  "Emollient",
-  "Surfactant"
+  "Spicy",
+  "Vegan",
+  "Vegetarian",
+  "Gluten-Free",
+  "Dairy-Free",
+  "Nut-Free",
+  "Dessert",
+  "Appetizer",
+  "Main Course",
+  "Side Dish",
+  "Quick & Easy",
+  "Healthy"
 ]
 
 tags.each do |tag_name|

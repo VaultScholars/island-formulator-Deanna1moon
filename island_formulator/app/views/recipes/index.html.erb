@@ -30,6 +30,20 @@
             <p class="text-gray-500 text-sm mt-2">
               <%= pluralize(recipe.ingredients.count, 'ingredient') %>
             </p>
+            <% if Current.user %>
+              <% favorite = Current.user.favorites.find_by(recipe: recipe) %>
+              <div class="mt-2">
+                <% if favorite %>
+                  <%= button_to favorite_path(favorite), method: :delete, class: "text-pink-500 text-2xl" do %>
+                    ❤️
+                  <% end %>
+                <% else %>
+                  <%= button_to favorites_path(recipe_id: recipe.id), method: :post, class: "text-gray-400 text-2xl hover:text-pink-500" do %>
+                    ♡
+                  <% end %>
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>
