@@ -13,3 +13,29 @@ body {
   background: linear-gradient(135deg, #82be58 0%, #f5e9d0 100%);
   min-height: 100vh;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  background-color: rgba(151, 233, 93, 0.15); /* pale transparent green */
+  border-radius: 0.375rem;
+  border: 1px solid #c3e6cb;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+  background-color: rgba(95, 169, 43, 0.214);
+  outline: none;
+  border-color: #82be58;
+}

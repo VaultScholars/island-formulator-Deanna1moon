@@ -23,11 +23,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-<body style="background-image: url('<%= asset_path("background1.jpg") %>');"
-      class="bg-cover bg-center bg-fixed">s
+<body style="background-image: url('<%= asset_path("background1.jpg") %>'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;"
+  class="bg-cover bg-center bg-fixed">
 
 <main class="container mx-auto mt-1 px-5 flex flex-col">
-  <nav class="mb-8 px-6 py-4 bg-white border-b border-gray-200 shadow-sm">
+  <nav class="mb-8 px-6 py-4 bg-white border-b border-gray-200 shadow-sm mt-10">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <%# Left side - App name and main nav %>
     <div class="flex items-center gap-8">
