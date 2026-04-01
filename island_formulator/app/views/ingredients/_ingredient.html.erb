@@ -13,6 +13,11 @@
   <% end %>
 </p>
 
+<% if ingredient.photo.attached? %>
+  <div class="pt-8 flex justify-center mb-4">
+    <%= image_tag ingredient.photo, style: "width: 1.5in; height: 1.5in; object-fit: cover;", class: "rounded-lg shadow border border-green-200" %>
+  </div>
+<% end %>
 <div id="<%= dom_id ingredient %>" class="w-full sm:w-auto my-5 space-y-5">
   <div>
     <strong class="block font-medium mb-1">Name:</strong>
