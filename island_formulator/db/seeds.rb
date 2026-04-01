@@ -31,18 +31,22 @@ puts "Created #{user.ingredients.count} ingredients for demo user!"
 Tag.destroy_all # Clean up old tags if they exist
 
 tags = [
-  "Spicy",
-  "Vegan",
-  "Vegetarian",
-  "Gluten-Free",
-  "Dairy-Free",
-  "Nut-Free",
-  "Dessert",
-  "Appetizer",
-  "Main Course",
-  "Side Dish",
-  "Quick & Easy",
-  "Healthy"
+  "Oil",
+  "Spice",
+  "Herb",
+  "Vegetable",
+  "Fruit",
+  "Protein",
+  "Dairy",
+  "Grain",
+  "Legume",
+  "Nut",
+  "Seed",
+  "Sauce",
+  "Organic",
+  "Fresh",
+  "Dry",
+  "Powdered"
 ]
 
 tags.each do |tag_name|
