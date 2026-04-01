@@ -55,7 +55,7 @@
 
 
   <div class="my-5">
-    <%= form.label :product_type, "Product Type (e.g. Hair Oil, Body Butter)" %>
+    <%= form.label :product_type, "Dish Type (e.g. Pasta, Soup, Dessert)" %>
     <%= form.text_field :product_type,
                     class: [
                       "block shadow-sm rounded-md border px-3 py-2 mt-2 w-full",
@@ -69,7 +69,7 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :method %>
+    <%= form.label :method, "Steps" %>
     <%= form.textarea :method,
                   rows: 5,
                   class: [
